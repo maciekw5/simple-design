@@ -1,0 +1,473 @@
+@use './colors' as c;
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: 'Raleway', sans-serif;
+	font-size: 1.6rem;
+}
+
+[id] {
+	scroll-margin-top: 60px;
+}
+
+.hero-shadow {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: c.$hero-shadow;
+	z-index: -1;
+}
+
+.top-hero {
+	position: relative;
+	height: 350px;
+	background-size: cover;
+	z-index: 0;
+}
+
+.top-hero-text {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	font-size: 3.6rem;
+	// text-transform: uppercase;
+}
+
+// Nav
+
+.navbar-brand {
+	font-size: 2.2rem;
+	font-weight: bold;
+	transition: color 0.3s;
+}
+
+.navbar__brand-color {
+	color: c.$main-color;
+}
+
+.navbar-brand:hover {
+	color: c.$main-color;
+}
+
+.nav-link:hover {
+	color: c.$main-color;
+}
+
+.fa-snowflake {
+	color: c.$main-color;
+}
+
+.navbar-toggler {
+	font-size: 2.5rem;
+	border: 1px solid transparent;
+}
+
+// Header
+
+.carousel-img-one {
+	background-image: url('../img/home/karuz-1-small.jpg');
+}
+
+.carousel-img-two {
+	background-image: url('../img/home/karu-2-small.jpg');
+}
+
+.carousel-img-three {
+	background-image: url('../img/home/karuz-3-small.jpg');
+}
+
+.carousel-item {
+	position: relative;
+	height: 400px;
+	background-size: cover;
+	background-position: center;
+	z-index: 0;
+}
+
+// Main
+
+.home-boxes {
+	padding: 2em 0;
+}
+
+.home-box {
+	transition: transform 0.3s;
+	cursor: default;
+}
+
+.home-box i {
+	font-size: 2.2rem;
+	transition: color 0.3s;
+}
+
+.home-boxes__title {
+	font-size: 2.2rem;
+	transition: color 0.3s;
+}
+
+// Passion
+
+.home-passion {
+	position: relative;
+	background-image: url('../img/home/pasja-small.jpg');
+	background-size: cover;
+	background-position: center;
+	height: 40rem;
+	z-index: 1;
+}
+
+.home-passion span {
+	font-weight: bold;
+	color: c.$main-color;
+}
+
+// Historia
+
+.history {
+	padding: 4em 2em;
+}
+
+.history__title {
+	font-weight: bold;
+	font-size: 2.2rem;
+}
+
+.history hr {
+	width: 70%;
+	margin: 0 auto;
+}
+
+.history__span-wyd,
+.history__span-at {
+	font-weight: bold;
+	color: c.$main-color;
+}
+
+.history__info {
+	text-align: left;
+	line-height: 2;
+}
+
+// Questions
+
+.questions {
+	background-color: c.$light-white;
+	padding: 4em 2em;
+}
+
+.accordion-button {
+	font-size: 1.8rem;
+	padding: 1em;
+}
+
+.accordion-body {
+	padding: 2em;
+}
+
+.accordion-button:not(.collapsed) {
+	color: c.$black;
+	background-color: c.$light-main-color;
+}
+
+.accordion-button:focus {
+	outline: none;
+	border-color: c.$main-color;
+	box-shadow: none;
+}
+
+footer {
+	font-size: 1.8rem;
+}
+
+// About Us - podstrona
+
+.top-hero {
+	height: 250px;
+}
+
+.aboutus-hero {
+	background-image: url('../img/about/onas-small.png');
+	background-size: cover;
+	background-position: center;
+}
+
+.aboutus-bottom .card {
+	cursor: default;
+	transition: transform 0.3s;
+}
+
+.aboutus-bottom .card:hover {
+	transform: scale(0.9);
+}
+
+// --------------
+
+.aboutus-top-info {
+	line-height: 2;
+}
+
+.aboutus-info {
+	background-color: c.$light-white;
+}
+
+.aboutus-info .container {
+	padding: 1.5em;
+}
+
+.aboutus-text {
+	padding: 2em;
+}
+
+.aboutus-text h3 {
+	font-weight: bold;
+	color: c.$main-color;
+	font-size: 2.4rem;
+	margin-bottom: 0.5em;
+}
+
+.aboutus-text-right {
+	text-align: right;
+}
+
+.aboutus-img {
+	height: 300px;
+	object-fit: cover;
+}
+
+.about-card i {
+	margin: 0 1em;
+	font-size: 2.5rem;
+}
+
+.card__title {
+	font-weight: bold;
+}
+
+.card__info {
+	font-size: 1.5rem;
+}
+
+.aboutus-bottom i {
+	font-size: 3rem;
+}
+
+.aboutus-bottom h3 {
+	font-size: 2.2rem;
+	font-weight: bold;
+}
+
+// Services
+
+.services-hero {
+	background-image: url('../img/services/services-hero-small.jpg');
+	background-size: cover;
+	background-position: center;
+}
+
+.service-box {
+	position: relative;
+	background-size: cover;
+	background-position: center;
+	z-index: 0;
+	height: 300px;
+	transition: transform 0.3s;
+}
+
+.service-box:hover {
+	transform: scale(0.9);
+}
+
+.service-box p {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 3rem;
+	text-transform: uppercase;
+	color: c.$pure-white;
+	pointer-events: none;
+}
+
+.service-box-one {
+	background-image: url('../img/services/service-box-1.jpg');
+}
+
+.service-box-two {
+	background-image: url('../img/services/service-box-2.jpg');
+}
+
+.service-box-three {
+	background-image: url('../img/services/service-box-3.jpg');
+}
+
+.service-box-four {
+	background-image: url('../img/services/service-box-4.jpg');
+}
+
+.service-shadow {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: c.$hero-custom-shadow;
+}
+
+// Portfolio
+
+.portfolio .card img {
+	height: 250px;
+	object-fit: cover;
+}
+
+.portfolio-hero {
+	background-image: url('../img/portfolio/portfolio-hero-small.jpg');
+	background-size: cover;
+	background-position: center;
+}
+
+.card-body button {
+	font-size: 1.4rem;
+}
+
+// Kontakt
+
+.contact-hero {
+	position: relative;
+	background-image: url('../img/contact/contact-hero-small.jpg');
+	background-size: cover;
+	background-position: center;
+}
+
+.btns-box {
+	display: flex;
+	justify-content: center;
+}
+
+.contact__send-btn,
+.contact__clear-btn {
+	font-size: 1.4rem;
+	margin: 0 0.5em;
+}
+
+.contact input,
+.contact select,
+.contact textarea {
+	font-size: 1.6rem;
+}
+
+.contact-map iframe {
+    width: 100%;
+    min-height: 400px;
+}
+
+//  Media Q
+
+@media (min-width: 768px) {
+	.carousel-img-one {
+		background-image: url('../img/home/karuz-1-big.jpg');
+	}
+
+	.carousel-img-two {
+		background-image: url('../img/home/karu-2-big.jpg');
+	}
+
+	.carousel-img-three {
+		background-image: url('../img/home/karuz-3-big.jpg');
+	}
+
+	.home-passion {
+		background-image: url('../img/home/pasja-big.jpg');
+	}
+
+	.aboutus-hero {
+		background-image: url('../img/about/onas-big.png');
+	}
+
+	.services-hero {
+		background-image: url('../img/services/services-hero-big.jpg');
+	}
+
+	.portfolio-hero {
+		background-image: url('../img/portfolio/portfolio-hero-big.jpg');
+	}
+
+	.contact-hero {
+		background-image: url('../img/contact/contact-hero-big.jpg');
+	}
+}
+
+@media (min-width: 992px) {
+	.home-box:hover {
+		transform: scale(1.1);
+
+		.home-boxes__title,
+		.fa-gears,
+		.fa-person,
+		.fa-clock {
+			color: c.$main-color;
+		}
+	}
+
+	.carousel-item {
+		height: 600px;
+	}
+
+	.history__img {
+		margin-top: 0;
+	}
+
+	.history__img:hover {
+		transform: scale(0.95);
+	}
+
+	.aboutus-info .container {
+		padding: 0;
+	}
+
+	.aboutus-shadow {
+		box-shadow: inset 0 5px 10px -5px rgba(0, 0, 0, 0.5);
+	}
+
+	.aboutus-text {
+		padding: 5em 3em;
+		transform: skew(-15deg);
+	}
+
+	.aboutus-text-left {
+		text-align: right;
+	}
+
+	.aboutus-text-right {
+		text-align: left;
+	}
+
+	.aboutus-img {
+		transform: skew(-15deg);
+		height: auto;
+	}
+}
+
+@media (min-width: 1200px) {
+	.carousel-item {
+		height: 800px;
+	}
+
+	.carousel__title {
+		font-size: 6rem;
+	}
+}
